@@ -121,7 +121,8 @@ public class MembershipProof {
 				cList.add(AdderInteger.random(q));
 				AdderInteger s = sList.get(i);
 				AdderInteger c = cList.get(i);
-				AdderInteger negC = c.negate();
+
+                AdderInteger negC = c.negate();
 				AdderInteger fpow = f.pow(d);
 				y = g.pow(s).multiply(bigG.pow(negC));
 				z = h.pow(s).multiply(bigH.divide(fpow).pow(negC));
